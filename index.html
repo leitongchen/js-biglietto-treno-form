@@ -13,23 +13,65 @@
 <body>
     <main>
         <section>
-            <h2>Calcola il prezzo del tuo biglietto</h2>
-            <div class="container">
-                <form action="" id="myForm">
-                    <input type="text" placeholder="Intestatario del biglietto" name="intestatario"> 
-                    <input type="number" placeholder="Quanti km devi percorrere" name="kmViaggio"> 
-                    
-                    <button>Invia</button>
-                </form>
+            <div class="container text-center">
 
+                <h2>Calcola il prezzo del tuo biglietto</h2>
+                
+                <form action="" id="myForm" class="box">
+                    <label>
+                        Nome Cognome
+                        <input type="text" placeholder="Intestatario del biglietto" name="intestatario"> 
+                    </label>
+
+                    <label>
+                        Km da percorrere
+                        <input type="number" placeholder="Quanti km devi percorrere" name="kmViaggio"> 
+                    </label>
+
+                    <label>
+                        Fascia d'et&#224;
+                        <select name="promo" id="promoSelect">
+                            <option value="">-- Scegli un'opzione--</option>
+                            <option value="young">Promo Young(-18y)</option>
+                            <option value="senior">Promo Senior(+65y)</option>
+                        </select>
+                    </label>
+
+                    <button class="btn">Genera</button>
+                    <button class="btn">Annulla</button>
+                </form>
             </div>
         </section>
         <section>
-            <h2>Il tuo biglietto</h2>
             <div class="container">
+                <h2 class="text-center">Il tuo biglietto</h2>
+                <div class="box">
+                    <h3>Dettaglio passeggeri</h3>
+                    <div>
+                        <h5>Nome Passeggero</h5>
+                        <span id="intestatario"></span>
+                    </div>
+                    <div>
+                        <h6>Offerta</h6>
+                        <span id="promo"></span>
+                    </div>
+                    <div>
+                        <h6>Carrozza</h6>
+                        <span id="nCarrozza"></span>
+                    </div>
+                    <div>
+                        <h6>Codice CP</h6>
+                        <span id="codiceCP"></span>
+                    </div>
+                    <div>
+                        <h6>Costo biglietto</h6>
+                        <span id="costoBiglietto"></span>
+                    </div>
 
-                
+                </div>
+
             </div>
+
         </section>
 
 

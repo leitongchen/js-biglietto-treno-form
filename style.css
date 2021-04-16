@@ -1,0 +1,15 @@
+main {
+    background-color: rgb(148, 47, 77);
+
+}
+
+.box {
+    background-color: white;
+    border-radius: 20px;
+
+    padding: 20px 50px;
+}
+
+.btn {
+    border: 1px solid rgb(148, 47, 77);
+}
