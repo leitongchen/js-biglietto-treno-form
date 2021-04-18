@@ -56,6 +56,7 @@ ticketForm.addEventListener('reset', function() {
         spanElement.innerHTML = "";
 
     }
+    
 
 })
 
