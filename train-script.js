@@ -1,18 +1,42 @@
+// Event listener per il caricamento della pagina prima di eseguire il codice js 
 window.addEventListener('load', function() {
 
     onWindowLoad();
 
 }); 
 
+// Tutto il codice viene contenuto dentro la funzione onWindowLoad,
+// eseguito dentro l'event listener di window 
 function onWindowLoad() {
 
+    // ANIMAZIONE SUI PULSANTI
+    /* var btn1 = document.getElementById('btn-1');
+    var btn2 = document.getElementById('btn-2');
+    var arrayBtn = [btn1, btn2]; */
+
+    var buttonsHtml = document.getElementsByTagName('button');
+
+    for (var j = 0; j < buttonsHtml.length; j++) {
+        var btnElement = buttonsHtml[j]; 
+
+        btnElement.addEventListener('mousedown', function(event) {
+            scale(event);
+        });    
+
+        btnElement.addEventListener('mouseup', function(event) {
+            deleteScale(event);
+        });   
+    }
+   
+
+    // FORM
     var ticketForm = document.getElementById("myForm");
 
     //Aggiungere listener sul form 
     ticketForm.addEventListener('submit', function (event) {
     
         event.preventDefault();
-    
+
         //recupera elemento form al quale ho associato l'evento submit
         var form = event.currentTarget;
         //recupera la lista di elementi input presenti nel form
@@ -24,7 +48,6 @@ function onWindowLoad() {
         var userKm = formElements.kmViaggio.value;
         var fasciaEta = formElements.promoSelect.value;
     
-        console.log(fasciaEta)
     
         if (inputDetected(intestatario, userKm, fasciaEta)) {
 
@@ -55,11 +78,9 @@ function onWindowLoad() {
         } else {
             document.getElementById("message-box").innerHTML = "Per generare il tuo biglietto devi prima inserire i dati."
         }
-    
-    
-    
     });
     
+    // RESET
     // cancella tutte le voci nel box "il mio biglietto" quando utente clicca ANNULLA
     ticketForm.addEventListener('reset', function () {
     
@@ -69,24 +90,23 @@ function onWindowLoad() {
             var spanElement = yourTicketSpans[i];
     
             spanElement.innerHTML = "";
-    
         }
     
-    
-    })
-    
-    
+    });
 
 }
 
 
-
-
-
+// aggiunge e toglie animazione pulsante
+function scale(event) {
+    event.currentTarget.classList.add('btn-animation');
+}
+function deleteScale(event) {
+    event.currentTarget.classList.remove('btn-animation');
+}
 
 
 // Funzione per verificare che l'utente abbia inserito i dati richiesti 
-
 function inputDetected(dato1, dato2, dato3) {
 
     if (dato1 === "" || dato2 === "" || dato3 === "") {
@@ -95,14 +115,6 @@ function inputDetected(dato1, dato2, dato3) {
     return true;
 }
 
-// funzione per controllare inserimento di numeri
-function numIsCorrect(num) {
-
-    if (num < 1) {
-        return false;
-    }
-    return true;
-}
 
 // Funzione che calcola il prezzo del biglietto (con sconto quando c'è)
 function priceCalc(numKm, promoValue) {

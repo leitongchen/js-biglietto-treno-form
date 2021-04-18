@@ -68,6 +68,16 @@ form label span {
     font-size: 1rem;
 }
 
+
+/* button animation - si attiva in js */
+.btn-animation {
+    transform: scale(0.95);
+
+    transition: transform .1s;
+}
+
+
+
 #message-box {
     color: rgb(148, 47, 77);
 
