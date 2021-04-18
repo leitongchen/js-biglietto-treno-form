@@ -27,9 +27,9 @@ ticketForm.addEventListener('submit', function(event) {
 
     document.getElementById("nCarrozza").innerHTML = randomCarrozza();
 
-    document.getElementById("codiceCP").innerHTML = randomNumGen();
+    document.getElementById("codiceCP").innerHTML = randomNumGen(90000, 99999);
 
-    document.getElementById("costoBiglietto").innerHTML = priceCalc(userKm, fasciaEta);
+    document.getElementById("costoBiglietto").innerHTML = "&#8364; " + priceCalc(userKm, fasciaEta).toFixed(2);
 
 
     function printPromo(promoValue) {
@@ -39,8 +39,7 @@ ticketForm.addEventListener('submit', function(event) {
         } else if (promoValue === "senior") {
             return "Promo senior - over 18";
         }
-        return "Nessuna promo"
-
+        return "Nessuna offerta"
     }
 
 }); 
@@ -56,7 +55,7 @@ ticketForm.addEventListener('reset', function() {
         spanElement.innerHTML = "";
 
     }
-    
+
 
 })
 

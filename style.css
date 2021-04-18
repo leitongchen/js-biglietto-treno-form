@@ -1,15 +1,136 @@
-main {
+body {
     background-color: rgb(148, 47, 77);
+}
 
+main {
+    font-family: 'Merriweather Sans', sans-serif;
+
+    padding: 40px;
+}
+
+h2 {
+    color: white;
 }
 
 .box {
     background-color: white;
     border-radius: 20px;
 
-    padding: 20px 50px;
+    overflow: auto;
 }
 
-.btn {
+.box.box-1 {
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.box.box-2 {
+    padding: 40px 20px;
+}
+
+.btn.btn_outline {
     border: 1px solid rgb(148, 47, 77);
+    color: rgb(148, 47, 77);
+    background-color: rgb(212, 212, 212);
+
+    font-size: 1rem;
+}
+
+/* FORM */
+
+form label {
+    color: rgb(148, 47, 77);
+}
+
+form label span {
+    display: block;
+}
+
+.pulsanti_form {
+    margin-top: 40px;
+}
+.pulsanti_form .btn.btn_outline {
+    margin: 0 10px;
+}
+
+#myForm input, 
+#myForm select {
+    border: 1px solid rgb(148, 47, 77);
+    border-radius: 5px;
+
+    font-size: .75rem;
+
+    /* padding: 5px 30px; */
+}
+
+
+.your-ticket h6 {
+    /* background-color: blueviolet; */
+}
+
+.output_grid .bg_gray {
+    background-color: rgb(163, 163, 163);
+}
+
+.output_grid [class^="col-"] {
+    border-top: 1px solid rgb(121, 121, 121);
+    border-bottom: 1px solid rgb(121, 121, 121);
+
+    padding: 10px;
+}
+
+
+/* Toglie i gutter di bootatrap per la sezione "Il tuo biglietto" */
+.output_grid.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.output_grid [class^="col-"] {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+@media all and (max-width: 576px) {
+
+    main {
+        padding: 20px 5px;
+    }
+
+    .box.box-1 {
+        padding: 20px;
+    }
+
+}
+
+@media all and (max-width: 767px) {
+
+    /* pulsanti e form */
+
+    #myForm .form-control-lg,
+    #myForm .form-select-lg {
+        font-size: .75rem;
+    }
+
+    .pulsanti_form .btn.btn_outline {
+        width: 100%;
+        margin: 10px 0;
+
+        font-size: .75rem;
+    }
+    .pulsanti_form {
+        margin-top: 0;
+    }
+
+    form label {
+        margin-bottom: 20px;
+    }
+
+    .output_grid [class^="col-"] {
+        border-top: 0;
+    }
+
+
+
+
 }
