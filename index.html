@@ -11,6 +11,9 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <script src="utility.js"></script>
+    <script src="train-script.js"></script>
+
     <title>Train Express</title>
 </head>
 <body>
@@ -29,7 +32,7 @@
     
                         <label class="col-12 col-md-4">
                             <span>Km da percorrere</span>
-                            <input class="form-control form-control-lg" type="number" placeholder="Quanti km devi percorrere" name="kmViaggio"> 
+                            <input class="form-control form-control-lg" type="number" min="1" placeholder="Quanti km devi percorrere" name="kmViaggio"> 
                         </label>
     
                         <label class="col-12 col-md-4">
@@ -46,33 +49,45 @@
                         <button type="submit" value="submit" class="btn btn-lg btn_outline">Genera</button>
                         <button type="reset" value="reset" class="btn btn-lg btn_outline">Annulla</button>
                     </div>
+                    <div id="message-box"></div>
+
                 </form>
             </div>
         </section>
-        <section>
+        <section id="ilTuoBiglietto" class="ilTuoBiglietto-hidden">
             <div class="container">
                 <h2 class="text-center">Il tuo biglietto</h2>
                 <div class="box box-2 your-ticket">
-                    <h3>Dettaglio passeggeri</h3>
+                    <h6 class="text-uppercase">Dettaglio passeggeri</h6>
                     <div class="row output_grid">
                         <div class="col-md-4 col-12 bg_gray">
-                            <h6>Nome Passeggero</h6>
+                            <div class="title_container">
+                                <h6 class="text-uppercase">Nome passeggero</h6>
+                            </div>
                             <span id="nomePasseggero"></span>
                         </div>
                         <div class="col-md-2 col-12">
-                            <h6>Offerta</h6>
+                            <div class="title_container">
+                                <h6>Offerta</h6>
+                            </div>
                             <span id="promo"></span>
                         </div>
                         <div class="col-md-2 col-12">
-                            <h6>Carrozza</h6>
+                            <div class="title_container">
+                                <h6>Carrozza</h6>
+                            </div>
                             <span id="nCarrozza"></span>
                         </div>
                         <div class="col-md-2 col-12">
-                            <h6>Codice CP</h6>
+                            <div class="title_container">
+                                <h6>Codice CP</h6>
+                            </div>
                             <span id="codiceCP"></span>
                         </div>
                         <div class="col-md-2 col-12">
-                            <h6>Costo biglietto</h6>
+                            <div class="title_container">
+                                <h6>Costo biglietto</h6>
+                            </div>
                             <span id="costoBiglietto"></span>
                         </div>
                     </div>
@@ -87,7 +102,6 @@
     </main>
 
 
-    <script src="utility.js"></script>
-    <script src="train-script.js"></script>
+    
 </body>
 </html>

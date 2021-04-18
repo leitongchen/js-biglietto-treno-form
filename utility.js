@@ -35,7 +35,7 @@ function isPalindrome(text) {
 }
 
 
-//Funzione che genera numeri random
+//Funzione che genera numeri random con un min e un max
 function randomNumGen(min, max) {
 
     var randomNum = Math.floor(Math.random() * (max - min + 1)) + min;

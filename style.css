@@ -12,6 +12,10 @@ h2 {
     color: white;
 }
 
+h6 {
+    color: rgb(148, 47, 77);
+}
+
 .box {
     background-color: white;
     border-radius: 20px;
@@ -28,13 +32,6 @@ h2 {
     padding: 40px 20px;
 }
 
-.btn.btn_outline {
-    border: 1px solid rgb(148, 47, 77);
-    color: rgb(148, 47, 77);
-    background-color: rgb(212, 212, 212);
-
-    font-size: 1rem;
-}
 
 /* FORM */
 
@@ -63,10 +60,22 @@ form label span {
     /* padding: 5px 30px; */
 }
 
+.btn.btn_outline {
+    border: 1px solid rgb(148, 47, 77);
+    color: rgb(148, 47, 77);
+    background-color: rgb(212, 212, 212);
 
-.your-ticket h6 {
-    /* background-color: blueviolet; */
+    font-size: 1rem;
 }
+
+#message-box {
+    color: rgb(148, 47, 77);
+
+    font-size: .75rem;
+    font-style: italic;
+    margin-top: 20px;
+}
+
 
 .output_grid .bg_gray {
     background-color: rgb(163, 163, 163);
@@ -79,6 +88,19 @@ form label span {
     padding: 10px;
 }
 
+.output_grid .title_container {
+    min-height: 40px;
+}
+
+.output_grid span {
+    font-size: .75rem;
+    font-weight: 800;
+}
+
+#nomePasseggero {
+    text-transform: capitalize;
+}
+
 
 /* Toglie i gutter di bootatrap per la sezione "Il tuo biglietto" */
 .output_grid.row {
@@ -89,6 +111,18 @@ form label span {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+
+/* Sezione "Il tuo biglietto */
+
+.ilTuoBiglietto-hidden {
+    display: none;
+}
+
+.ilTuoBiglietto-visible {
+    display: block;
+}
+
 
 
 @media all and (max-width: 576px) {
