@@ -38,7 +38,7 @@ function isPalindrome(text) {
 //Funzione che genera numeri random
 function randomNumGen() {
 
-    var randomNum = Math.ceil(Math.random() * 5);
+    var randomNum = Math.floor(Math.random() * 100000);
 
     return randomNum;
 }
